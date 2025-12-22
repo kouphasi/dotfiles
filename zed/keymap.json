@@ -1,0 +1,78 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext", // c-j for up
+      "ctrl-k": "editor::ContextMenuPrevious" // c-k for down
+    }
+  },
+  {
+    "bindings": {
+      "s": null,
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-s h": "workspace::ActivatePaneLeft",
+      "ctrl-s l": "workspace::ActivatePaneRight",
+      "ctrl-s k": "workspace::ActivatePaneUp",
+      "ctrl-s j": "workspace::ActivatePaneDown",
+      "ctrl-s n": "tab_switcher::Toggle",
+      "ctrl-s shift-n": ["tab_switcher::Toggle", { "select_last": true }]
+    }
+  },
+  {
+    "context": "TabSwitcher && showing",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "s h": "workspace::ActivatePaneLeft",
+      "s l": "workspace::ActivatePaneRight",
+      "s k": "workspace::ActivatePaneUp",
+      "s j": "workspace::ActivatePaneDown",
+      "cmd-right": "editor::AcceptPartialEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operator || vim_mode == waiting)",
+    "bindings": {
+      "0": "vim::EndOfLine",
+      "1": "vim::StartOfLine",
+      "enter": ["workspace::SendKeystrokes", "o escape"]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operatior)",
+    "bindings": {
+      "ctrl-j": ["workspace::SendKeystrokes", "j j j"],
+      "ctrl-k": ["workspace::SendKeystrokes", "k k k"],
+      ", ,": "vim::ToggleComments",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "s": null
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": ["workspace::SendKeystrokes", "escape"],
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "shift-enter": [
+        "terminal::SendText",
+        "\u001b\r"
+      ]
+    }
+  }
+]
