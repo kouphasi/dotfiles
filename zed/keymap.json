@@ -1,15 +1,27 @@
 [
   {
     "context": "Workspace",
+    "bindings": {},
+  },
+  {
+    "context": "Workspace || Editor",
     "bindings": {
-    }
+      "cmd-shift-i": "workspace::ToggleRightDock",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "ctrl-n": "project_panel::CollapseSelectedEntry",
+      "ctrl-shift-n": "project_panel::CollapseAllEntries",
+    },
   },
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
       "ctrl-j": "editor::ContextMenuNext", // c-j for up
-      "ctrl-k": "editor::ContextMenuPrevious" // c-k for down
-    }
+      "ctrl-k": "editor::ContextMenuPrevious", // c-k for down
+    },
   },
   {
     "bindings": {
@@ -21,15 +33,15 @@
       "ctrl-s k": "workspace::ActivatePaneUp",
       "ctrl-s j": "workspace::ActivatePaneDown",
       "ctrl-s n": "tab_switcher::Toggle",
-      "ctrl-s shift-n": ["tab_switcher::Toggle", { "select_last": true }]
-    }
+      "ctrl-s shift-n": ["tab_switcher::Toggle", { "select_last": true }],
+    },
   },
   {
     "context": "TabSwitcher && showing",
     "bindings": {
       "ctrl-k": "menu::SelectPrevious",
-      "ctrl-j": "menu::SelectNext"
-    }
+      "ctrl-j": "menu::SelectNext",
+    },
   },
   {
     "context": "Editor && vim_mode == normal",
@@ -38,41 +50,87 @@
       "s l": "workspace::ActivatePaneRight",
       "s k": "workspace::ActivatePaneUp",
       "s j": "workspace::ActivatePaneDown",
-      "cmd-right": "editor::AcceptPartialEditPrediction"
-    }
+      "s n": "tab_switcher::Toggle",
+      "ctrl-right": "editor::AcceptPartialEditPrediction",
+      "super-k f": "editor::Format",
+    },
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operator || vim_mode == waiting)",
     "bindings": {
       "0": "vim::EndOfLine",
       "1": "vim::StartOfLine",
-      "enter": ["workspace::SendKeystrokes", "o escape"]
-    }
+      "enter": ["workspace::SendKeystrokes", "o escape"],
+    },
   },
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operatior)",
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "ctrl-j": ["workspace::SendKeystrokes", "j j j"],
       "ctrl-k": ["workspace::SendKeystrokes", "k k k"],
+      "ctrl-l": ["workspace::SendKeystrokes", "l l l"],
+      "ctrl-h": ["workspace::SendKeystrokes", "h h h"],
       ", ,": "vim::ToggleComments",
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
-      "s": null
-    }
+      "s s": "pane::SplitRight",
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "j j": ["workspace::SendKeystrokes", "escape"],
-    }
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "ctrl-a": "vim::VisualInsertEndOfLine",
+      "ctrl-i": "vim::VisualInsertFirstNonWhiteSpace",
+      "shift-s": "vim::PushAddSurrounds",
+      "shift-h": "vim::PushOutdent",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == operator",
+    "bindings": {
+      "shift-a": "vim::VisualInsertEndOfLine",
+      "shift-i": "vim::VisualInsertFirstNonWhiteSpace",
+    },
   },
   {
     "context": "Terminal",
     "bindings": {
-      "shift-enter": [
-        "terminal::SendText",
-        "\u001b\r"
-      ]
+      "shift-enter": ["terminal::SendText", "\u001b\r"],
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-n": "agent::ToggleNewThreadMenu",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-cmd-shift-n": "agent::NewThread",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "h": "project_panel::OpenSplitHorizontal",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "o": "project_panel::OpenPermanent",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-k p": "workspace::CopyRelativePath"
     }
   }
 ]
