@@ -6,11 +6,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "project_panel": {
-    "folder_icons": true,
-    "file_icons": true
-  },
-  "agent_buffer_font_size": 21.0,
   "git_panel": {
     "sort_by_path": true
   },
@@ -50,7 +45,6 @@
     },
     "enabled_in_text_threads": true
   },
-  "icon_theme": "Catppuccin Mocha",
   "features": {
     "edit_prediction_provider": "copilot"
     // "edit_prediction_provider": "zed"
@@ -68,6 +62,12 @@
       "model": "claude-sonnet-4.5"
     }
   },
+  "project_panel": {
+    "folder_icons": true,
+    "file_icons": true
+  },
+  "icon_theme": "Catppuccin Mocha",
+  "agent_buffer_font_size": 16.0,
   "agent_ui_font_size": 16.0,
   "confirm_quit": true,
   "telemetry": {
@@ -82,6 +82,7 @@
   "format_on_save": "off",
   "show_whitespaces": "all",
   "experimental.theme_overrides": {
+    // コメントを灰色のイタリック体に変更
     "syntax": {
       "comment": {
         "font_style": "italic",
@@ -155,10 +156,15 @@
     },
     "eslint": {
       "settings": {
-        "shortenToSingleLine": true
+        // "shortenToSingleLine": true
       }
     },
     "solargraph": {
+      "settings": {
+        "rubocop": {
+          "enabled": false
+        },
+      }
     },
     "typos": {
       "initialization_options": {
@@ -194,8 +200,6 @@
     "button": false
   },
   "preview_tabs": {
-    // 沢山開きがちなので、プレビュータブで開く
-    // "enable_preview_from_file_finder": true,
     "enable_keep_preview_on_code_navigation": true
   },
   "tabs": {
@@ -208,6 +212,7 @@
   },
   "diagnostics": {
     "inline": {
+      // rubyのsolargraphの警告が多いので非表示
       // "enabled": true
     }
   },
