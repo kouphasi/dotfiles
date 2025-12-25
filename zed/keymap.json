@@ -51,7 +51,6 @@
       "s k": "workspace::ActivatePaneUp",
       "s j": "workspace::ActivatePaneDown",
       "s n": "tab_switcher::Toggle",
-      "ctrl-right": "editor::AcceptPartialEditPrediction",
       "super-k f": "editor::Format",
     },
   },
@@ -80,6 +79,7 @@
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "j j": ["workspace::SendKeystrokes", "escape"],
+      "super-right": "editor::AcceptPartialEditPrediction",
     },
   },
   {
