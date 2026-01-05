@@ -1,0 +1,13 @@
+[push]
+	default = current
+[alias]
+	sw = switch
+	ps = push -u
+	pl = pull
+	f = fetch
+	lgo = log --oneline
+	lg = log
+	co = commit -m
+	amend = commit --amend
+	
+
