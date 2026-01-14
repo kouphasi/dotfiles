@@ -1,0 +1,10 @@
+scrollback-limit=200000
+font-size=16
+copy-on-select = clipboard
+clipboard-paste-protection=false
+font-family = HackGen Console NF
+keybind = super+]=goto_split:next
+macos-option-as-alt = true
+keybind = shift+enter=text:\x1b\r
+font-family = HackGen Console NF Regular
+macos-icon=retro
