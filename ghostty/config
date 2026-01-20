@@ -1,4 +1,4 @@
-scrollback-limit=200000
+scrollback-limit=5000000
 font-size=16
 copy-on-select = clipboard
 clipboard-paste-protection=false
@@ -8,3 +8,4 @@ macos-option-as-alt = true
 keybind = shift+enter=text:\x1b\r
 font-family = HackGen Console NF Regular
 macos-icon=retro
+background-opacity=1
