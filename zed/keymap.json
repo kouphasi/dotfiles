@@ -79,7 +79,7 @@
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "j j": ["workspace::SendKeystrokes", "escape"],
-      "super-right": "editor::AcceptPartialEditPrediction",
+      "super-right": "editor::AcceptNextWordEditPrediction",
     },
   },
   {
@@ -131,6 +131,23 @@
   {
     "bindings": {
       "cmd-k p": "workspace::CopyRelativePath"
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "s l": "project_panel::OpenPermanent"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-;": null
+    }
+  },
+  {
+    "bindings": {
+      "cmd-;": "editor::ToggleRelativeLineNumbers"
     }
   }
 ]
