@@ -1,66 +1,67 @@
 // Zed settings
 //
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed //
+// For information on how to configure Zed, see the Zed // documentation: https://zed.dev/docs/configuring-zed //
 // To see all of Zed"s default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
   "git_panel": {
-    "sort_by_path": true,
+    "tree_view": true,
+    "sort_by_path": true
   },
   "agent_servers": {
     "claude": {
-      "default_mode": "acceptEdits",
-    },
+      "default_mode": "acceptEdits"
+    }
   },
   "ssh_connections": [
     {
       "host": "matcher_redash",
       "projects": [
         {
-          "paths": ["/home/redash/redash/docker-compose.yml"],
-        },
-      ],
+          "paths": [
+            "/home/redash/redash/docker-compose.yml"
+          ]
+        }
+      ]
     },
     {
       "host": "analytics",
       "projects": [
         {
-          "paths": ["/home/k.miyoshi/analytics_container"],
-        },
-      ],
-    },
+          "paths": [
+            "/home/k.miyoshi/analytics_container"
+          ]
+        }
+      ]
+    }
   ],
   "edit_predictions": {
+    "provider": "copilot",
     "disabled_globs": [],
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "proxy": null,
-      "proxy_no_verify": null,
+      "proxy_no_verify": null
     },
-    "enabled_in_text_threads": true,
-  },
-  "features": {
-    "edit_prediction_provider": "copilot",
-    // "edit_prediction_provider": "zed"
+    "enabled_in_text_threads": true
   },
   "agent": {
     "default_width": 640.0,
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4"
     },
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
-    },
+      "model": "gemini-3-flash-preview"
+    }
   },
   "project_panel": {
     "folder_icons": true,
-    "file_icons": true,
+    "file_icons": true
   },
   "icon_theme": "Catppuccin Mocha",
   "agent_buffer_font_size": 16.0,
@@ -68,7 +69,7 @@
   "confirm_quit": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "unnecessary_code_fade": 0.6,
   "vim_mode": true,
@@ -82,47 +83,47 @@
     "syntax": {
       "comment": {
         "font_style": "italic",
-        "color": "#808080",
+        "color": "#808080"
       },
       "comment.doc": {
         "font_style": "italic",
-        "color": "#808080",
-      },
-    },
+        "color": "#808080"
+      }
+    }
   },
   "theme": {
-    "mode": "system",
-    "light": "Ayu Mirage",
-    "dark": "One Dark",
+    "mode": "dark",
+    "light": "Tokyo Night Light",
+    "dark": "Ayu Mirage"
   },
   "languages": {
     "JavaScript": {
-      "language_servers": ["vtsls", "eslint"],
+      "language_servers": [ "vtsls", "eslint" ],
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"],
-        },
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
       },
-      "colorize_brackets": true,
+      "colorize_brackets": true
     },
     "TypeScript": {
-      "colorize_brackets": true,
+      "colorize_brackets": true
     },
     "Dart": {
       "colorize_brackets": true,
     },
     "Vue.js": {
       "colorize_brackets": true,
-      "language_servers": ["vtsls", "eslint", "emmet-language-server"],
+      "language_servers": [ "vtsls", "eslint", "emmet-language-server" ]
       // "language_servers": [ "vtsls", "eslint" ]
       // "language_servers": [ "vtsls", "scss-lsp" ]
       // "language_servers": [ "vtsls", "emmet-language-server" ]
       // "language_servers": [ "vtsls", "vue-language-server" ]
     },
     "Ruby": {
-      "language_servers": ["solargraph", "typos", "!ruby-lsp"],
-    },
+      "language_servers": [ "!ruby-lsp", "solargraph", "typos", "!ruby-lsp" ]
+    }
   },
   "lsp": {
     // TypeScript + Vue
@@ -136,39 +137,39 @@
                 "location": "~/.local/share/zed/extensions/work/vue/node_modules/@vue/language-server",
                 "languages": ["vue.js"],
                 "configNamespace": "typescript",
-                "enableForWorkspaceTypeScriptVersions": true,
-              },
-            ],
-          },
-        },
-      },
+                "enableForWorkspaceTypeScriptVersions": true
+              }
+            ]
+          }
+        }
+      }
     },
     "vue-language-server": {
       "initialization_options": {
         "vue": {
-          "hybridMode": false,
-        },
-      },
+          "hybridMode": false
+        }
+      }
     },
     "eslint": {
       "settings": {
         // "shortenToSingleLine": true
-      },
+      }
     },
     "solargraph": {
       "settings": {
         "rubocop": {
-          "enabled": false,
+          "enabled": false
         },
-      },
+      }
     },
     "typos": {
       "initialization_options": {
         "config": ".typos.toml",
         "diagnosticSeverity": "Information",
-        "logLevel": "info",
-      },
-    },
+        "logLevel": "info"
+      }
+    }
     // "emmet-language-server": {
     //   "settings": {
     //     "languages": ["Vue.js","TSX", "HTML", "CSS", "ERB", "JavaScript"]
@@ -177,7 +178,7 @@
   },
   "collaboration_panel": {
     // collaborationは使用しないので非表示
-    "button": false,
+    "button": false
   },
   // "chat_panel": {
   //   // chatは使用しないので非表示
@@ -185,32 +186,32 @@
   // },
   "notification_panel": {
     // notificationは使用しないので非表示
-    "button": false,
+    "button": false
   },
   "outline_panel": {
     // outlineは使用しないので非表示
-    "button": false,
+    "button": false
   },
   "debugger": {
     // debuggerは使用しないので非表示
-    "button": false,
+    "button": false
   },
   "preview_tabs": {
-    "enable_keep_preview_on_code_navigation": true,
+    "enable_keep_preview_on_code_navigation": true
   },
   "tabs": {
-    "file_icons": true,
+    "file_icons": true
   },
   "extend_comment_on_newline": false,
   "snippet_sort_order": "bottom",
   "minimap": {
-    "show": "never",
+    "show": "never"
   },
   "diagnostics": {
     "inline": {
       // rubyのsolargraphの警告が多いので非表示
       // "enabled": true
-    },
+    }
   },
   "indent_guides": {
     "enabled": true,
