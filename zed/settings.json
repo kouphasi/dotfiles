@@ -10,6 +10,11 @@
     "sort_by_path": true
   },
   "agent_servers": {
+    "codex": {
+      "favorite_models": [
+        "gpt-5.3-codex/medium"
+      ]
+    },
     "claude": {
       "default_mode": "acceptEdits"
     }
