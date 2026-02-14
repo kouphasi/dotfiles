@@ -82,6 +82,21 @@ alias g='git'
 function gitlines () {
   git log --numstat --pretty="%H" --author=`git config user.name` --no-merges | awk "NF==3 {plus+=\$1; minus+=\$2} END {printf(\"$(git config user.name) commits %d lines (+%d, -%d)\\n\", plus+minus, plus, minus)}"
 }
+# bun completions
+[ -s "/Users/koheimiyoshi/.bun/_bun" ] && source "/Users/koheimiyoshi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/koheimiyoshi/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 
 export EDITOR=nvim
 export VISUAL=nvim
