@@ -19,28 +19,6 @@
       "default_mode": "acceptEdits"
     }
   },
-  "ssh_connections": [
-    {
-      "host": "matcher_redash",
-      "projects": [
-        {
-          "paths": [
-            "/home/redash/redash/docker-compose.yml"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "analytics",
-      "projects": [
-        {
-          "paths": [
-            "/home/k.miyoshi/analytics_container"
-          ]
-        }
-      ]
-    }
-  ],
   "edit_predictions": {
     "provider": "copilot",
     "disabled_globs": [],
