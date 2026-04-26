@@ -1,1 +1,6 @@
-vim.opt.clipboard = "unnamedplus"
+require("base")
+require("keymaps")
+require("config.lazy")
+require("config.lsp")
+
+vim.cmd.colorscheme "catppuccin-mocha"
