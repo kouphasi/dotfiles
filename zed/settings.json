@@ -5,37 +5,81 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "title_bar": {
+    "show_branch_name": false
+  },
+  "show_edit_predictions": true,
+  "diff_view_style": "unified",
+  "tab_size": 2,
   "git_panel": {
+    "fallback_branch_name": "main",
+    "dock": "left",
     "tree_view": true,
     "sort_by_path": true
   },
+  "git": {
+    "branch_picker": {
+      "show_author_name": true,
+      "button": false
+    }
+  },
   "agent_servers": {
-    "codex": {
+    "codex-acp": {
+      "type": "registry",
       "favorite_models": [
         "gpt-5.3-codex/medium"
       ]
     },
-    "claude": {
+    "claude-acp": {
+      "type": "registry",
       "default_mode": "acceptEdits"
     }
   },
+  "ssh_connections": [
+    {
+      "host": "matcher_redash",
+      "projects": [
+        {
+          "paths": [
+            "/home/redash/redash/docker-compose.yml"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "analytics",
+      "projects": [
+        {
+          "paths": [
+            "/home/k.miyoshi/analytics_container"
+          ]
+        }
+      ]
+    }
+  ],
   "edit_predictions": {
     "provider": "copilot",
     "disabled_globs": [],
     "mode": "subtle",
     "copilot": {
+      "enable_next_edit_suggestions": false,
       "proxy": null,
       "proxy_no_verify": null
     },
     "enabled_in_text_threads": true
   },
   "agent": {
+    "button": true,
+    "sidebar_side": "right",
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_width": 640.0,
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
     },
-    "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
@@ -43,6 +87,7 @@
     }
   },
   "project_panel": {
+    "dock": "left",
     "folder_icons": true,
     "file_icons": true
   },
@@ -58,7 +103,6 @@
   "vim_mode": true,
   "buffer_font_size": 16,
   "buffer_font_family": "HackGen35 Console NF",
-  "tab_size": 2,
   "format_on_save": "off",
   "show_whitespaces": "all",
   "experimental.theme_overrides": {
@@ -80,6 +124,12 @@
     "dark": "Ayu Mirage"
   },
   "languages": {
+    "Rust": {
+      "show_edit_predictions": false
+    },
+    "Go": {
+      "show_edit_predictions": true
+    },
     "JavaScript": {
       "language_servers": [ "vtsls", "eslint" ],
       "formatter": {
@@ -161,6 +211,7 @@
   },
   "collaboration_panel": {
     // collaborationは使用しないので非表示
+    "dock": "left",
     "button": false
   },
   // "chat_panel": {
@@ -173,11 +224,15 @@
   },
   "outline_panel": {
     // outlineは使用しないので非表示
+    "dock": "left",
     "button": false
   },
   "debugger": {
     // debuggerは使用しないので非表示
     "button": false
+  },
+  "search": {
+    "button": false,
   },
   "preview_tabs": {
     "enable_keep_preview_on_code_navigation": true
