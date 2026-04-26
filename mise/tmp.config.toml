@@ -1,0 +1,9 @@
+[tools]
+codex = "latest"
+fastfetch = "latest"
+fzf = "latest"
+lazygit = "latest"
+neovim = "latest"
+node = "latest"
+pnpm = "latest"
+zoxide = "latest"
