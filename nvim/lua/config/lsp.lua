@@ -4,6 +4,7 @@ vim.lsp.enable({
   "lua_ls",
   "vtsls",
   "copilot",
+  "sqls",
   -- 他の言語サーバーの設定
   -- "gopls",
 })
