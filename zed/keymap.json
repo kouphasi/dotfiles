@@ -151,5 +151,41 @@
     "bindings": {
       "cmd-;": "editor::ToggleRelativeLineNumbers"
     }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-l": "vim::Indent"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      ">": "vim::Indent"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-h": "vim::Outdent"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "<": "vim::Outdent"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space": "project_panel::Open"
+    }
+  },
+  {
+    "context": "GitPanel && ChangesList && !GitBranchSelector",
+    "bindings": {
+      "space": "git::ToggleStaged"
+    }
   }
 ]
